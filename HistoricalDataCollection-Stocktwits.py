@@ -96,8 +96,6 @@ db["tweetst"].create_index( "id", unique= True )
     
 timesecond = 0
 
-
-
 for k in range(0,8):
     time.sleep(timesecond)
     begin = datetime.now()
@@ -111,9 +109,7 @@ for k in range(0,8):
                 db,
                 collection_name,
                 ticker)
-
-
-        
+   
         if result == 429:
             end = datetime.now()
             time_code = end - begin
